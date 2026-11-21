@@ -87,13 +87,13 @@ fun NotificationListenerPermissionCard(
                     }
                     Spacer(modifier = Modifier.width(12.dp))
                     Text(
-                        text = stringResource(R.string.notification_access_required),
+                        text = stringResource(R.string.dolby_notification_access_required),
                         style = MaterialTheme.typography.titleLargeEmphasized,
                         color = MaterialTheme.colorScheme.onErrorContainer
                     )
                 }
                 Text(
-                    text = stringResource(R.string.notification_access_required_desc),
+                    text = stringResource(R.string.dolby_notification_access_required_desc),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onErrorContainer,
                     modifier = Modifier.padding(bottom = 16.dp)
@@ -113,7 +113,7 @@ fun NotificationListenerPermissionCard(
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.enable_notification_access))
+                    Text(stringResource(R.string.dolby_enable_notification_access))
                 }
             }
         }
@@ -140,14 +140,14 @@ fun NotificationListenerPermissionCard(
             },
             title = {
                 Text(
-                    stringResource(R.string.enable_notification_access),
+                    stringResource(R.string.dolby_enable_notification_access),
                     style = MaterialTheme.typography.titleLargeEmphasized,
                     color = MaterialTheme.colorScheme.onSurface
                 ) 
             },
             text = {
                 Text(
-                    stringResource(R.string.notification_access_permission_details),
+                    stringResource(R.string.dolby_notification_access_permission_details),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -164,7 +164,7 @@ fun NotificationListenerPermissionCard(
                         contentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
-                    Text(stringResource(R.string.open_settings))
+                    Text(stringResource(R.string.dolby_open_settings))
                 }
             },
             dismissButton = {
@@ -175,7 +175,7 @@ fun NotificationListenerPermissionCard(
                         contentColor = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 ) {
-                    Text(stringResource(R.string.cancel))
+                    Text(stringResource(android.R.string.cancel))
                 }
             },
             shape = MaterialTheme.shapes.extraLarge,

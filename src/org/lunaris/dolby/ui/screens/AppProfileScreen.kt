@@ -50,7 +50,7 @@ fun AppProfileScreen(
             TopAppBar(
                 title = { 
                     Text(
-                        stringResource(R.string.app_profiles_title),
+                        stringResource(R.string.dolby_app_profiles_title),
                         style = MaterialTheme.typography.headlineMediumEmphasized,
                         color = MaterialTheme.colorScheme.onSurface
                     ) 
@@ -106,7 +106,7 @@ fun AppProfileScreen(
                     ) {
                         CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                         Text(
-                            text = stringResource(R.string.app_profiles_loading),
+                            text = stringResource(R.string.dolby_app_profiles_loading),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -143,7 +143,7 @@ fun AppProfileScreen(
                                 onValueChange = { searchQuery = it },
                                 placeholder = { 
                                     Text(
-                                        stringResource(R.string.app_profiles_search_placeholder),
+                                        stringResource(R.string.dolby_app_profiles_search_placeholder),
                                         color = MaterialTheme.colorScheme.onSurfaceVariant
                                     ) 
                                 },
@@ -193,7 +193,7 @@ fun AppProfileScreen(
                                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                                 Text(
-                                    text = stringResource(R.string.app_profiles_no_apps_found),
+                                    text = stringResource(R.string.dolby_app_profiles_no_apps_found),
                                     style = MaterialTheme.typography.bodyMedium,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
@@ -246,7 +246,7 @@ fun AppProfileScreen(
                             onClick = { viewModel.loadApps() },
                             shape = MaterialTheme.shapes.large
                         ) {
-                            Text(stringResource(R.string.app_profiles_retry))
+                            Text(stringResource(R.string.dolby_app_profiles_retry))
                         }
                     }
                 }
@@ -363,7 +363,7 @@ private fun AppProfileItem(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = stringResource(R.string.app_profiles_change),
+                            text = stringResource(R.string.dolby_app_profiles_change),
                             style = MaterialTheme.typography.labelLarge
                         )
                         Spacer(modifier = Modifier.width(4.dp))
@@ -387,7 +387,7 @@ private fun AppProfileItem(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    stringResource(R.string.app_profiles_default),
+                                    stringResource(R.string.dolby_app_profiles_default),
                                     color = MaterialTheme.colorScheme.onSurface
                                 )
                                 if (app.assignedProfile == -1) {

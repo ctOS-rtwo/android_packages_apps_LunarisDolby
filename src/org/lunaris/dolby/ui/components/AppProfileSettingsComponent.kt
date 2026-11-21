@@ -81,14 +81,14 @@ fun AppProfileSettingsCard(
                 Spacer(modifier = Modifier.width(12.dp))
                 
                 Text(
-                    text = stringResource(R.string.app_profiles_title),
+                    text = stringResource(R.string.dolby_app_profiles_title),
                     style = MaterialTheme.typography.titleLargeEmphasized,
                     color = MaterialTheme.colorScheme.onSurface
                 )
             }
             
             Text(
-                text = stringResource(R.string.app_profiles_desc),
+                text = stringResource(R.string.dolby_app_profiles_desc),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 16.dp)
@@ -100,7 +100,7 @@ fun AppProfileSettingsCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = stringResource(R.string.app_profiles_auto_switch),
+                    text = stringResource(R.string.dolby_app_profiles_auto_switch),
                     style = MaterialTheme.typography.bodyLarge,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.onSurface
@@ -160,7 +160,7 @@ fun AppProfileSettingsCard(
                     contentColor = MaterialTheme.colorScheme.onErrorContainer
                 ) {
                     Text(
-                        text = stringResource(R.string.device_state_memory_conflict_summary),
+                        text = stringResource(R.string.dolby_device_state_memory_conflict_summary),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onErrorContainer,
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
@@ -179,13 +179,13 @@ fun AppProfileSettingsCard(
                     ) {
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = context.getString(R.string.app_profiles_headphone_only),
+                                text = context.getString(R.string.dolby_app_profiles_headphone_only),
                                 style = MaterialTheme.typography.bodyLarge,
                                 fontWeight = FontWeight.Medium,
                                 color = MaterialTheme.colorScheme.onSurface
                             )
                             Text(
-                                text = context.getString(R.string.app_profiles_headphone_only_description),
+                                text = context.getString(R.string.dolby_app_profiles_headphone_only_description),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.padding(top = 2.dp)
@@ -232,7 +232,7 @@ fun AppProfileSettingsCard(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = stringResource(R.string.app_profiles_show_toasts),
+                            text = stringResource(R.string.dolby_app_profiles_show_toasts),
                             style = MaterialTheme.typography.bodyLarge,
                             fontWeight = FontWeight.Medium,
                             color = MaterialTheme.colorScheme.onSurface
@@ -286,16 +286,16 @@ fun AppProfileSettingsCard(
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = stringResource(R.string.device_state_memory_title),
+                        text = stringResource(R.string.dolby_device_state_memory_title),
                         style = MaterialTheme.typography.bodyLarge,
                         fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = if (isEnabled)
-                            stringResource(R.string.app_profile_conflict_summary)
+                            stringResource(R.string.dolby_app_profile_conflict_summary)
                         else
-                            stringResource(R.string.device_state_memory_summary),
+                            stringResource(R.string.dolby_device_state_memory_summary),
                         style = MaterialTheme.typography.bodySmall,
                         color = if (isEnabled)
                             MaterialTheme.colorScheme.error
@@ -319,7 +319,7 @@ fun AppProfileSettingsCard(
                             AppProfileMonitorService.stopMonitoring(context)
                             android.widget.Toast.makeText(
                                 context,
-                                context.getString(R.string.app_profile_conflict_toast),
+                                context.getString(R.string.dolby_app_profile_conflict_toast),
                                 android.widget.Toast.LENGTH_SHORT
                             ).show()
                         }
@@ -369,7 +369,7 @@ fun AppProfileSettingsCard(
                     modifier = Modifier.size(20.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(stringResource(R.string.app_profiles_manage))
+                Text(stringResource(R.string.dolby_app_profiles_manage))
             }
         }
     }
@@ -395,14 +395,14 @@ fun AppProfileSettingsCard(
             },
             title = {
                 Text(
-                    stringResource(R.string.app_profiles_permission_required),
+                    stringResource(R.string.dolby_app_profiles_permission_required),
                     style = MaterialTheme.typography.titleLargeEmphasized,
                     color = MaterialTheme.colorScheme.onSurface
                 ) 
             },
             text = {
                 Text(
-                    stringResource(R.string.app_profiles_permission_required_details),
+                    stringResource(R.string.dolby_app_profiles_permission_required_details),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -420,7 +420,7 @@ fun AppProfileSettingsCard(
                         contentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
-                    Text(stringResource(R.string.app_profiles_grant_permission))
+                    Text(stringResource(R.string.dolby_app_profiles_grant_permission))
                 }
             },
             dismissButton = {
@@ -431,7 +431,7 @@ fun AppProfileSettingsCard(
                         contentColor = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 ) {
-                    Text(stringResource(R.string.cancel))
+                    Text(stringResource(android.R.string.cancel))
                 }
             },
             shape = MaterialTheme.shapes.extraLarge,

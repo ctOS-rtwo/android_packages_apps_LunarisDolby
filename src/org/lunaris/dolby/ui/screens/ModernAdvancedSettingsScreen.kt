@@ -274,7 +274,7 @@ private fun ModernAdvancedSettingsContent(
                                 Column {
                                     Spacer(modifier = Modifier.height(16.dp))
                                     ModernSettingSlider(
-                                        title = stringResource(R.string.dolby_hp_virtualizer_dolby_strength),
+                                        title = stringResource(R.string.dolby_hp_virtualizer_strength),
                                         value = state.profileSettings.stereoWideningAmount,
                                         onValueChange = { viewModel.setStereoWidening(it.toInt()) },
                                         valueRange = 4f..64f,
@@ -303,7 +303,7 @@ private fun ModernAdvancedSettingsContent(
                             Column {
                                 Spacer(modifier = Modifier.height(16.dp))
                                 ModernSettingSlider(
-                                    title = stringResource(R.string.dolby_dialogue_enhancer_dolby_strength),
+                                    title = stringResource(R.string.dolby_dialogue_enhancer_strength),
                                     value = state.profileSettings.dialogueEnhancerAmount,
                                     onValueChange = { viewModel.setDialogueEnhancerAmount(it.toInt()) },
                                     valueRange = 1f..12f,

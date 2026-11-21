@@ -159,7 +159,7 @@ fun PresetImportExportScreen(
             TopAppBar(
                 title = { 
                     Text(
-                        stringResource(R.string.import_export_presets),
+                        stringResource(R.string.dolby_import_export_presets),
                         style = MaterialTheme.typography.headlineMediumEmphasized,
                         color = MaterialTheme.colorScheme.onSurface
                     ) 
@@ -225,13 +225,13 @@ fun PresetImportExportScreen(
                                         }
                                         Spacer(modifier = Modifier.width(12.dp))
                                         Text(
-                                            stringResource(R.string.import_presets),
+                                            stringResource(R.string.dolby_import_presets),
                                             style = MaterialTheme.typography.titleLargeEmphasized,
                                             color = MaterialTheme.colorScheme.onSurface
                                         )
                                     }
                                     Text(
-                                        stringResource(R.string.import_presets_description),
+                                        stringResource(R.string.dolby_import_presets_description),
                                         style = MaterialTheme.typography.bodyMedium,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         modifier = Modifier.padding(bottom = 16.dp)
@@ -251,7 +251,7 @@ fun PresetImportExportScreen(
                                         ) {
                                             Icon(Icons.Default.FolderOpen, contentDescription = null)
                                             Spacer(Modifier.width(8.dp))
-                                            Text(stringResource(R.string.import_single_file))
+                                            Text(stringResource(R.string.dolby_import_single_file))
                                         }
                                         Button(
                                             onClick = { batchImportLauncher.launch("*/*") },
@@ -264,7 +264,7 @@ fun PresetImportExportScreen(
                                         ) {
                                             Icon(Icons.Default.FolderCopy, contentDescription = null)
                                             Spacer(Modifier.width(8.dp))
-                                            Text(stringResource(R.string.import_batch))
+                                            Text(stringResource(R.string.dolby_import_batch))
                                         }
                                     }
                                     Spacer(Modifier.height(8.dp))
@@ -307,14 +307,14 @@ fun PresetImportExportScreen(
                                     ) {
                                         Icon(Icons.Default.ContentPaste, contentDescription = null)
                                         Spacer(Modifier.width(8.dp))
-                                        Text(stringResource(R.string.import_from_clipboard))
+                                        Text(stringResource(R.string.dolby_import_from_clipboard))
                                     }
                                 }
                             }
                         }
                         item {
                             Text(
-                                stringResource(R.string.your_custom_presets),
+                                stringResource(R.string.dolby_your_custom_presets),
                                 style = MaterialTheme.typography.titleMediumEmphasized,
                                 color = MaterialTheme.colorScheme.onSurface,
                                 modifier = Modifier.padding(vertical = 8.dp)
@@ -403,7 +403,7 @@ fun PresetImportExportScreen(
                             CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                             Spacer(Modifier.height(16.dp))
                             Text(
-                                stringResource(R.string.processing),
+                                stringResource(R.string.dolby_processing),
                                 color = MaterialTheme.colorScheme.onSurface
                             )
                         }
@@ -437,13 +437,13 @@ fun PresetImportExportScreen(
             },
             title = {
                 Text(
-                    stringResource(R.string.batch_export),
+                    stringResource(R.string.dolby_batch_export),
                     color = MaterialTheme.colorScheme.onSurface
                 )
             },
             text = {
                 Text(
-                    stringResource(R.string.batch_export_description, presetCount),
+                    stringResource(R.string.dolby_batch_export_description, presetCount),
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             },
@@ -458,7 +458,7 @@ fun PresetImportExportScreen(
                         contentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
-                    Text(stringResource(R.string.export_all))
+                    Text(stringResource(R.string.dolby_export_all))
                 }
             },
             dismissButton = {
@@ -469,7 +469,7 @@ fun PresetImportExportScreen(
                         contentColor = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 ) {
-                    Text(stringResource(R.string.cancel))
+                    Text(stringResource(android.R.string.cancel))
                 }
             },
             shape = MaterialTheme.shapes.extraLarge,

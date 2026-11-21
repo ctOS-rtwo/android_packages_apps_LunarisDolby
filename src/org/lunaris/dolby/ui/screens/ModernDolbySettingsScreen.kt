@@ -81,7 +81,7 @@ fun ModernDolbySettingsScreen(
                     ) {
                         CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                         Text(
-                            text = stringResource(R.string.loading),
+                            text = stringResource(R.string.dolby_loading),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )

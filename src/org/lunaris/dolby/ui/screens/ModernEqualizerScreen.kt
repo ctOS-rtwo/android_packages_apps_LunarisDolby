@@ -93,7 +93,7 @@ fun ModernEqualizerScreen(
                         }
                         DropdownMenu(expanded = showActions, onDismissRequest = { showActions = false }) {
                             DropdownMenuItem(
-                                text = { Text(stringResource(R.string.preset_import_export)) },
+                                text = { Text(stringResource(R.string.dolby_preset_import_export)) },
                                 leadingIcon = { Icon(Icons.Default.ImportExport, null) },
                                 onClick = {
                                     showActions = false
@@ -294,13 +294,13 @@ private fun ModernEqualizerContent(
                     )
                     Column {
                         Text(
-                            text = stringResource(R.string.band_mode_mismatch),
+                            text = stringResource(R.string.dolby_band_mode_mismatch),
                             style = MaterialTheme.typography.titleSmallEmphasized,
                             color = MaterialTheme.colorScheme.onErrorContainer
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
-                            text = stringResource(R.string.preset_cannot_be_edited, state.currentPreset.bandMode.displayName,
+                            text = stringResource(R.string.dolby_preset_cannot_be_edited, state.currentPreset.bandMode.displayName,
                                     state.bandMode.displayName, state.currentPreset.bandMode.displayName),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onErrorContainer
@@ -416,8 +416,8 @@ private fun CurveViewContent(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = if (canEdit) stringResource(R.string.interactive_frequency_response)
-                          else stringResource(R.string.frequency_response_ro),
+                    text = if (canEdit) stringResource(R.string.dolby_interactive_frequency_response)
+                          else stringResource(R.string.dolby_frequency_response_ro),
                     style = MaterialTheme.typography.titleMediumEmphasized,
                     color = if (canEdit) MaterialTheme.colorScheme.onSurface
                           else MaterialTheme.colorScheme.onSurfaceVariant
@@ -438,9 +438,9 @@ private fun CurveViewContent(
             }
             Text(
                 text = if (canEdit)
-                    stringResource(R.string.interactive_frequency_response_summary) + " • ${getFrequencyRange(state.bandGains)}"
+                    stringResource(R.string.dolby_interactive_frequency_response_summary) + " • ${getFrequencyRange(state.bandGains)}"
                 else
-                    stringResource(R.string.frequency_response_ro_summary),
+                    stringResource(R.string.dolby_frequency_response_ro_summary),
                 style = MaterialTheme.typography.bodySmall,
                 color = if (canEdit) MaterialTheme.colorScheme.onSurfaceVariant
                       else MaterialTheme.colorScheme.error,
@@ -486,7 +486,7 @@ private fun SlidersViewContent(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = stringResource(R.string.frequency_response),
+                        text = stringResource(R.string.dolby_frequency_response),
                         style = MaterialTheme.typography.titleMediumEmphasized,
                         color = MaterialTheme.colorScheme.onSurface
                     )
@@ -557,7 +557,7 @@ private fun SlidersViewContent(
                                     tint = MaterialTheme.colorScheme.onErrorContainer
                                 )
                                 Text(
-                                    text = stringResource(R.string.locked),
+                                    text = stringResource(R.string.dolby_locked),
                                     style = MaterialTheme.typography.labelSmallEmphasized,
                                     color = MaterialTheme.colorScheme.onErrorContainer
                                 )
@@ -646,13 +646,13 @@ private fun BandTunerCard(
         Column(modifier = Modifier.padding(20.dp)) {
             EqualizerSectionHeader(
                 icon = Icons.Default.GraphicEq,
-                title = stringResource(R.string.band_tuner),
+                title = stringResource(R.string.dolby_band_tuner),
                 enabled = enabled,
                 modifier = Modifier.padding(bottom = 4.dp)
             )
 
             Text(
-                text = stringResource(R.string.band_tuner_desc),
+                text = stringResource(R.string.dolby_band_tuner_desc),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 16.dp)
@@ -665,14 +665,14 @@ private fun BandTunerCard(
             ) {
                 BandStepButton(
                     icon = Icons.Default.ChevronLeft,
-                    contentDescription = stringResource(R.string.band_tuner_previous),
+                    contentDescription = stringResource(R.string.dolby_band_tuner_previous),
                     enabled = enabled && index > 0,
                     onClick = { selectedIndex = index - 1 }
                 )
 
                 Text(
                     text = stringResource(
-                        R.string.band_tuner_position,
+                        R.string.dolby_band_tuner_position,
                         index + 1,
                         bandGains.size
                     ),
@@ -685,7 +685,7 @@ private fun BandTunerCard(
 
                 BandStepButton(
                     icon = Icons.Default.ChevronRight,
-                    contentDescription = stringResource(R.string.band_tuner_next),
+                    contentDescription = stringResource(R.string.dolby_band_tuner_next),
                     enabled = enabled && index < bandGains.lastIndex,
                     onClick = { selectedIndex = index + 1 }
                 )
@@ -700,7 +700,7 @@ private fun BandTunerCard(
             ) {
                 Text(
                     text = stringResource(
-                        R.string.band_tuner_label,
+                        R.string.dolby_band_tuner_label,
                         index + 1,
                         formatFrequency(band.frequency)
                     ),
@@ -765,7 +765,7 @@ private fun BandTunerCard(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 BandAdjustButton(
-                    label = stringResource(R.string.band_tuner_decrement),
+                    label = stringResource(R.string.dolby_band_tuner_decrement),
                     enabled = enabled && band.gain > -150,
                     onClick = {
                         val newGain = (band.gain - 1).coerceAtLeast(-150)
@@ -775,7 +775,7 @@ private fun BandTunerCard(
                     modifier = Modifier.weight(1f)
                 )
                 BandAdjustButton(
-                    label = stringResource(R.string.band_tuner_reset),
+                    label = stringResource(R.string.dolby_band_tuner_reset),
                     enabled = enabled && band.gain != 0,
                     onClick = {
                         sliderValue = 0f
@@ -784,7 +784,7 @@ private fun BandTunerCard(
                     modifier = Modifier.weight(1f)
                 )
                 BandAdjustButton(
-                    label = stringResource(R.string.band_tuner_increment),
+                    label = stringResource(R.string.dolby_band_tuner_increment),
                     enabled = enabled && band.gain < 150,
                     onClick = {
                         val newGain = (band.gain + 1).coerceAtMost(150)
@@ -986,12 +986,12 @@ private fun BandModeSelector(
         Column(modifier = Modifier.padding(20.dp)) {
             EqualizerSectionHeader(
                 icon = Icons.Default.Tune,
-                title = stringResource(R.string.band_configuration),
+                title = stringResource(R.string.dolby_band_configuration),
                 modifier = Modifier.padding(bottom = 12.dp)
             )
             
             Text(
-                text = stringResource(R.string.choose_equalizer_precision),
+                text = stringResource(R.string.dolby_choose_equalizer_precision),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 12.dp)

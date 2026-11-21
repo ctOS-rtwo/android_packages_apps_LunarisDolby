@@ -69,9 +69,9 @@ fun FloatingNavToolbar(
                         else -> Icons.Rounded.Home
                     },
                     label = stringResource(when (route) {
-                        "equalizer" -> R.string.equalizer
-                        "advanced" -> R.string.advanced
-                        else -> R.string.home
+                        "equalizer" -> R.string.dolby_equalizer
+                        "advanced" -> R.string.dolby_advanced
+                        else -> R.string.dolby_home
                     }),
                     selected = selectedIndex == index,
                     onClick = {
